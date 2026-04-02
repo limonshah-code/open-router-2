@@ -36,7 +36,7 @@ def generate_response(messages):
         "Content-Type": "application/json"
     }
     data = {
-        "model": "nvidia/nemotron-3-super-120b-a12b:free",
+        "model": "stepfun/step-3.5-flash:free",
         "messages": messages
     }
     
