@@ -17,7 +17,7 @@ EXTERNAL_API_BASE = 'https://cloud-text-manager-server.vercel.app'
 EXTERNAL_API_URL = f'{EXTERNAL_API_BASE}/api/all-files'
 GENERATED_DIR = os.path.join(os.getcwd(), 'generated-content')
 
-BATCH_SIZE = 1
+BATCH_SIZE = 10
 CONCURRENCY_LIMIT = 1
 REQUEST_DELAY = 1.5
 MAX_RETRIES = 5
@@ -36,7 +36,7 @@ def generate_response(messages):
         "Content-Type": "application/json"
     }
     data = {
-        "model": "z-ai/glm-4.5-air:free",
+        "model": "nvidia/nemotron-3-super-120b-a12b:free",
         "messages": messages
     }
     
